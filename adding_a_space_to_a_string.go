@@ -3,7 +3,7 @@ package main_test
 // https://leetcode.com/problems/adding-spaces-to-a-string/
 func addSpaces(s string, spaces []int) string {
 	i, j := 0, 0
-	var b []byte
+	b := make([]byte, 0, len(s)+len(spaces))
 
 	for i < len(s) {
 		if j < len(spaces) && i == spaces[j] {
